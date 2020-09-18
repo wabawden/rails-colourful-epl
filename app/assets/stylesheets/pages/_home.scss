@@ -1,1 +1,128 @@
 // Specific CSS for your home-page
+body {
+  background-color: darkgray;
+}
+
+h1 {
+  font-family: 'Archivo Black', sans-serif;
+  font-weight: bold;
+  margin-bottom: 0px;
+  line-height: 0.7;
+  font-size: 64px;
+}
+
+.header {
+  color: whitesmoke;
+}
+
+.arsenal {
+  color: white;
+  background-color: #EF0107;
+}
+
+.leicester {
+  color: white;
+  background-color: #003090;
+}
+
+.chelsea {
+  color: white;
+  background-color: #034694;
+}
+
+.wolves {
+  color: #231F20;
+  background-color: #FDB913;
+}
+
+.newcastle {
+  color: white;
+  background-color: #241F20;
+}
+
+.liverpool {
+  color: #F6EB61;
+  background-color: #C8102E;
+}
+
+.everton {
+  color: white;
+  background-color: #003399;
+}
+
+.palace {
+  color: #C4122E;
+  background-color: #1B458F;
+}
+
+.villa {
+  color: #95BFE5;
+  background-color: #670E36;
+}
+
+.mancity {
+  color: #1C2C5B;
+  background-color: #6CABDD;
+}
+
+.manutd {
+  color: white;
+  background-color: #DA291C;
+}
+
+.burnley {
+  color: #99D6EA;
+  background-color: #6C1D45;
+}
+
+.leeds {
+  color: #1D428A;
+  background-color: #FEFDFD;
+}
+
+.spurs {
+  color: #132257;
+  background-color: white;
+}
+
+.southampton {
+  color: white;
+  background-color: #D71920;
+}
+
+.brighton {
+  color: white;
+  background-color: #0057B8;
+}
+
+.sheffutd {
+  color: white;
+  background-color: #EE2737;
+}
+
+.westham {
+  color: #1BB1E7;
+  background-color: #7A263A;
+}
+
+.westbrom {
+  color: white;
+  background-color: #122F67;
+}
+
+.fulham {
+  color: black;
+  background-color: white;
+}
+
+@media only screen and (max-width: 800px) {
+  h1 {
+    font-size: 48px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  h1 {
+    font-size: 24px;
+  }
+}

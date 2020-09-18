@@ -1,2 +1,10 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="table-container">
+  <div class="header py-1">
+    <h1>EPL <%= Date.today.strftime("%d/%m/%y") %></h1>
+  </div>
+  <% @table.each do |team| %>
+    <div class="team <%= team.classname(team) %> py-1">
+      <h1><%= team.names(team).upcase %></h1>
+    </div>
+  <% end %>
+</div>
