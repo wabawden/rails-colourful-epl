@@ -1,6 +1,6 @@
 
 
-## A quick project using the [FootBall Data](https://www.football-data.org/) API t create a minimal but very colourful live Premier League table.
+## A quick project using the [FootBall Data](https://www.football-data.org/) API to create a minimal but very colourful live Premier League table.
 
 ### Next steps:
 
