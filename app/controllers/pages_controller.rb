@@ -4,11 +4,12 @@ require 'json'
 class PagesController < ApplicationController
   def home
     response = Faraday.new('http://api.football-data.org/v2/competitions/2021/standings', headers: { 'X-Auth-Token' => '8ca89bfab8d54a1e93329e2239d4a6a0' }).get
-    table = []
+    teams = []
+    @table = JSON.parse(response.body)["standings"][0]["table"]
     JSON.parse(response.body)["standings"][0]["table"].each do |team|
-      table << team["team"]["name"]
+      teams << team["team"]["name"]
     end
-    @table = table
+    @teams = teams
   end
 end
 

@@ -1,10 +1,45 @@
 <div class="table-container">
-  <div class="header py-1">
-    <h1>EPL <%= Date.today.strftime("%d/%m/%y") %></h1>
+  <div class="d-flex header">
+    <div class="header team-name py-1">
+      <h1>EPL <%= Date.today.strftime("%d/%m/%y") %></h1>
+    </div>
+    <div class="team-data header-played py-1">
+      <h1>P</h1>
+    </div>
+    <div class="team-data header-won py-1">
+      <h1>W</h1>
+    </div>
+    <div class="team-data header-draw py-1">
+      <h1>D</h1>
+    </div>
+    <div class="team-data header-lost py-1">
+      <h1>L</h1>
+    </div>
+    <div class="team-data header-points py-1">
+      <h1>P</h1>
+    </div>
   </div>
   <% @table.each do |team| %>
-    <div class="team <%= team.classname(team) %> py-1">
-      <h1><%= team.names(team).upcase %></h1>
+    <div class="d-flex team <%= team["team"]["name"].classname(team["team"]["name"]) %> py-1">
+      <div class="team-name">
+        <h1><%= team["team"]["name"].names(team["team"]["name"]).upcase %></h1>
+      </div>
+      <div class="team-data team-played">
+        <h1><%= team["playedGames"] %></h1>
+      </div>
+      <div class="team-data team-won">
+        <h1><%= team["won"] %></h1>
+      </div>
+      <div class="team-data team-draw">
+        <h1><%= team["draw"] %></h1>
+      </div>
+      <div class="team-data team-lost">
+        <h1><%= team["lost"] %></h1>
+      </div>
+      <div class="team-data team-points">
+        <h1><%= team["points"] %></h1>
+      </div>
     </div>
   <% end %>
 </div>
+      <% raise %>

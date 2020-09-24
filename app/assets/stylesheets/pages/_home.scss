@@ -15,6 +15,14 @@ h1 {
   color: whitesmoke;
 }
 
+.team-name {
+  width: 40%;
+}
+
+.team-data {
+  width: 7%;
+}
+
 .arsenal {
   color: white;
   background-color: #EF0107;
@@ -115,14 +123,35 @@ h1 {
   background-color: white;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1300px) {
   h1 {
     font-size: 48px;
   }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 1000px) {
   h1 {
     font-size: 24px;
+  }
+  .team-name {
+    width: 30%;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .team-name {
+    width: 40%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .team-name {
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .team-name {
+    width: 70%;
   }
 }
