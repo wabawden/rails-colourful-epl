@@ -5,11 +5,22 @@ class PagesController < ApplicationController
   def home
     response = Faraday.new('http://api.football-data.org/v2/competitions/2021/standings', headers: { 'X-Auth-Token' => '8ca89bfab8d54a1e93329e2239d4a6a0' }).get
     teams = []
+    table = []
     @table = JSON.parse(response.body)["standings"][0]["table"]
     JSON.parse(response.body)["standings"][0]["table"].each do |team|
-      teams << team["team"]["name"]
+      table << team["team"]["name"]
     end
     @teams = teams
+  end
+  def getsquad(id)
+    club_id = id
+    doc = Nokogiri::HTML(URI.open("https://soccerwiki.org/squad.php?clubid=#{club_id}"))
+    squad = []
+    doc.css('table.sortable-onload-4-6r').each do |link|
+      link.children.each do |child|
+        squad << child.children[3].children.first.children.first.content if child.name == "tr" && child.children[3].children.first.children.first
+      end
+    end
   end
 end
 
@@ -65,6 +76,11 @@ class String
     end
   end
 
+  def wiki_id(team)
+    case team
+    when "Arsenal FC" then 1
+    end
+  end
 end
 
 
